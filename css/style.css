@@ -1,21 +1,35 @@
 
-  
+  /**/
   body {
-    background: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%); 
+    background-size: auto, auto, cover; /* adjust sizes */
+    background: linear-gradient(90deg, #0d1b2a 0%, #1b263b 33%,#415a77 66%,#778da9 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     padding: 30px;
     box-sizing: border-box;
+    
+  }
+
+  .background-pattern{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes sure it fills nicely */
+    z-index: -1; /* behind everything */
 
   }
   
   .topnav {
-    padding-left: 10px;
+    padding: 10px;
     overflow: hidden;
     display: flex;
     align-items: center;
-    margin-bottom:  50px;
+    margin-bottom:  40px;
     width: 100%;          
+    justify-content: space-between; /* Align home to the left, book to the right */
+    border: solid black;
   }
 
   a {
@@ -37,16 +51,18 @@
   }
 
   .home{
+    position: relative; /* to appear above */
+    z-index: 1;
     padding-right: 100px;
     color : white;
     font-size: 50px;
-    -webkit-text-stroke: .2px black;
+
   }
 
   .prices,.contact,.gallery{
     padding-right: 50px;
-    margin-top: 20px;
-    font-size: 15px
+    margin-top: 10px;
+    font-size: 20px
   }
 
   
@@ -57,7 +73,7 @@
   }
   
   .book,.choose-plan {
-    color: #8251ee;
+    color: #1b263b;
     background: white;
     margin-left: 70px;
     padding: 15px 30px;
@@ -65,26 +81,37 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(130, 81, 238, 0.3);
     transition: all 0.3s ease;
 
   }
   
   .book:hover,.choose-plan:hover {
-    background: linear-gradient(to right, #5a2cd8, #7e4be7);
+    background: linear-gradient(90deg, #0d1b2a 0%, #1b263b 33%,#415a77 66%,#778da9 100%);
     color: white;
-    box-shadow: 0 6px 20px rgba(130, 81, 238, 0.5);
     transform: scale(1.05);
   }
   
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column; 
+    padding-left: 7%;
+    padding-right: 7%;
+    border: solid black;
+
+  }
 
   .description{
-    padding: 5px;
+    padding: 2px;
     display: flex;    
     width: 100%;          
     overflow: hidden;   
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color : white;
+    border: solid black;
+    justify-content: center;
 
 }
 
@@ -93,11 +120,9 @@
     display: flex;         
     align-items: center;  
     justify-content: center; 
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     padding: 20px;
-    -webkit-text-stroke: .2px black;
-
 
   }
 
@@ -112,3 +137,22 @@
     gap: 20px; 
   }
   
+
+  .pic {
+    border: solid black;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 20px; /* make image corners rounded too */
+    width: 100%; /* responsive */
+    text-align: center;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* make image corners rounded too */
+  }
