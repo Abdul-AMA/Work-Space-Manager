@@ -5,8 +5,10 @@
     background: linear-gradient(90deg, #0d1b2a 0%, #1b263b 33%,#415a77 66%,#778da9 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    padding: 30px;
+    padding: 30px ;
     box-sizing: border-box;
+    height: 100%;
+
     
   }
 
@@ -29,7 +31,6 @@
     margin-bottom:  40px;
     width: 100%;          
     justify-content: space-between; /* Align home to the left, book to the right */
-    border: solid black;
   }
 
   a {
@@ -99,7 +100,6 @@
     flex-direction: column; 
     padding-left: 7%;
     padding-right: 7%;
-    border: solid black;
 
   }
 
@@ -110,7 +110,6 @@
     overflow: hidden;   
     margin-bottom: 40px;
     color : white;
-    border: solid black;
     justify-content: center;
 
 }
@@ -123,6 +122,7 @@
     font-size: 35px;
     font-weight: bold;
     padding: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   }
 
@@ -139,7 +139,6 @@
   
 
   .pic {
-    border: solid black;
 
     justify-content: center;
     align-items: center;
@@ -156,3 +155,70 @@
     height: auto;
     border-radius: 20px; /* make image corners rounded too */
   }
+
+
+  .book_now_banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eef7fd;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+    width: 90%;
+    position: relative;
+    padding: 10px;
+    margin-top: -40px;
+  }
+  
+  .timer-div {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .hot-offer {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+  
+  #timer {
+    font-size: 20px;
+    color: #014296;
+    font-weight: 500;
+    font-family: cursive;
+    margin-left: 25px;
+  }
+  
+  .the_offer {
+    flex: 1;
+    font-size: 30px;
+    font-weight: 500;
+    color: #222;
+    align-items: center;
+    text-align: center;
+    font-family: cursive;
+
+  }
+  
+  .book_now_button {
+    color: white;
+    background: linear-gradient(90deg, #0d1b2a 0%, #1b263b 33%,#415a77 66%,#778da9 100%);
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-color: #1b263b;
+  }
+  
+  .book_now_button:hover {
+
+    transform: scale(1.05);
+    }
+  
